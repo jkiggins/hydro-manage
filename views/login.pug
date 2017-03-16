@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    div(class = "uk-container")
+        form(action = "" method = "POST" id = 'login_frm' class = "uk-form uk-card-body")
+            legend(class = "uk-legend") Login
+
+            fieldset(class = "uk-fieldset" data-uk-margin)
+                div(class="uk-margin")
+                    input(type = "text" name = "username" placeholder="username" class = "uk-input")
+                div(class="uk-margin")
+                    input(type = "password" name = "password" placeholder="Password" class = "uk-input")
+
+            input(type = "submit" class = "uk-button" value = "Login")
+
+            //div(class='uk-width-medium-1-2 uk-container-center')
+            a(class = 'uk-link-muted uk-margin-left' href = '/users/create') Create User
+
+        - if (error['user']) {
+        script(type = "text/javascript").
+            formErrorsByName('login_frm', !{JSON.stringify(error['user'])}, 'uk-input');
+        - }
+

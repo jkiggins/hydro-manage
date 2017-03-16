@@ -1,0 +1,22 @@
+extends layout
+
+block pageHeader
+    nav(class="uk-navbar")
+        img(class="uk-navbar-brand" src="/img/brand.png")
+        ul(class="uk-navbar-nav")
+            li: a(href="/hydro/schemes") Schemes
+            li: a(href="/hydro/collections") Collections
+            li: a(href="/hydro/power") Power Plans
+            li: a(href="/hydro/stats") Statistics
+
+        div(class="uk-navbar-flip")
+            ul(class="uk-navbar-nav")
+                li(class="uk-parent" data-uk-dropdown)
+                    a(href="#")= user['username']
+                    div(class="uk-dropdown uk-dropdown-navbar")
+                        ul(class="uk-nav uk-nav-navbar")
+                            li: a(href="/users/manage") Manage
+                            li: a(href="/users/logout") Logout
+
+block content
+

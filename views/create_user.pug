@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    div(class = "uk-container")
+        form(action = "" method = "POST" id = 'create_frm' class = "uk-form uk-card-body")
+            legend(class = "uk-legend") Create User
+
+            fieldset(class = "uk-fieldset" data-uk-margin)
+                div(class="uk-margin")
+                    input(type = "text" name = "username" placeholder="username" class = "uk-input")
+                div(class="uk-margin")
+                    input(type = "password" name = "password" placeholder="Password" class = "uk-input")
+                div(class="uk-margin")
+                    input(type = "password" name = "password_confirm" placeholder="Confirm Password" class = "uk-input")
+
+            input(type = "submit" class = "uk-button" value = "Create User")
+
+        - if (error['user']) {
+        script(type = "text/javascript").
+            formErrorsByName('create_frm', !{JSON.stringify(error['user'])}, 'uk-input');
+        - }
