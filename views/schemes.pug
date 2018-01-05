@@ -1,0 +1,21 @@
+extends layout_nav
+
+block Title
+    h2(class='uk-font hydro-font-color-primary') Schemes
+
+block content
+    div(id = "scheme_container" class="uk-container-large")
+        each val, key in schemes
+            div(class='uk-grid-collapse uk-grid uk-background-muted uk-text-center uk-margin-small')
+                div(class="uk-panel uk-padding-small uk-width-1-6 uk-background-secondary hydro-font-color-primary")= val.name
+                    //div(class="uk-clearfix uk-text-middle")= val.name
+                div(class = "uk-panel")
+                    button(class="uk-button uk-button-default hydro-button-padding-lr-small uk-height-1-1") Uses
+                        span(class="uk-margin-small-right uk-icon" uk-icon="icon: chevron-down")
+                    ul(class = "uk-nav uk-navbar-dropdown hydro-width-2-1" uk-drop="mode: click")
+                        -if (val.uses){
+                            each val_u, key_u in val.uses
+                                li.uk-active: a(href='#{val_u.link}')=val_u.name
+                        -}else{
+                            li: a(href='#') This Scheme isn't used anywhere
+                        -}

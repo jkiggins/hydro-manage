@@ -6,17 +6,20 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.3"
-    ,"debug": "~2.2.0"
-    ,"express": "~4.15"
-    ,"cookie-session": "~2.0.0-beta"
-    ,"pug": "~2.0.0-beta"
-    ,"less-middleware": "~2.2.0"
-    ,"morgan": "~1.7.0"
-    ,"serve-favicon": "~2.3.0"
-    ,"mongodb": "~2.2.0"
-    ,"body-parser": "~1.16.0"
-    ,"bcrypt": "*"
-    ,"bower": "*"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.15",
+    "cookie-session": "~2.0.0-beta",
+    "pug": "~2.0.0-beta",
+    "less-middleware": "~2.2.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0",
+    "mongodb": "~2.2.0",
+    "body-parser": "~1.16.0",
+    "bcrypt": "*",
+    "bower": "*"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }

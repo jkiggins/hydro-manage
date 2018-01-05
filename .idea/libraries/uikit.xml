@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="uikit" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$USER_HOME$/Documents/libs/uikit/src" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$USER_HOME$/Documents/libs/uikit/src" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

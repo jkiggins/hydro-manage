@@ -115,11 +115,11 @@ router.all('/login', function loginAll (req, res, next) {
     if(req.session.hasOwnProperty('hydro-user'))
     {
         res.redirect('/');
+    }else {
+        req.hydro_ctx['Title'] = "Login";
+        req.hydro_ctx['error']['user'] = {};
+        next();
     }
-
-    req.hydro_ctx['Title'] = "Login";
-    req.hydro_ctx['error']['user'] = {};
-    next();
 });
 
 router.get('/login', function loginGet(req, res, next) {

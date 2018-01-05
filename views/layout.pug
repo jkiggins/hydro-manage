@@ -2,15 +2,18 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/uikit/css/uikit.css')
+    link(rel='stylesheet', href='/uikit/dist/css/uikit-core.css')
+    link(rel='stylesheet', href='/uikit/dist/css/uikit.css')
     link(rel='stylesheet', href='/font-awesome/css/font-awesome.css')
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
 
     script(type = "text/javascript" src="/js/site.js")
     script(type = "text/javascript" src="/jquery/dist/jquery.js")
-    script(type = "text/javascript" src="/uikit/js/uikit.js")
+    script(type = "text/javascript" src="/uikit/dist/js/uikit.js")
+    script(type = "text/javascript" src = "/uikit/dist/js/uikit-icons.js")
 
-  body
+    body
     - if (error.hasOwnProperty('main')){
         div(class = "uk-alert uk-alert-danger" data-uk-alert)
             a(class="uk-alert-close uk-close")

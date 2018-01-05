@@ -14,8 +14,9 @@
 
   ,"Schemes":[
     {
-      "power_source_type": "link to sources type_lookup document"
-      ,"toggle_points": [0, 10, 20, "These are percentages, the system toggles off/on or on/off at these ponts, default is off"]
+      "name": "unique identifier for scheme, defined by user"
+      ,"notes": "notes about the scheme"
+      ,"toggle_points": [0, 10, 20, "These are percentages, the system toggles off/on or on/off at these ponts, default is off, a leading zero essentially switches to default of on"]
     }
   ]
 
